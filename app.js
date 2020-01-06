@@ -4,11 +4,13 @@ const bodyParser = require('body-parser');
 const product = require('./routes/product.route'); // Imports routes for the products
 var app = express();
 const product_details = require('./controllers/product.controller');
-
-app.use(allowCrossDomain);
+app.configure(function () {
+    app.use(allowCrossDomain);
+  });
 app.use('/products', product);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
+
 
 // Set up mongoose connection
 const mongoose = require('mongoose');

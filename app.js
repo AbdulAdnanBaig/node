@@ -5,10 +5,10 @@ const product = require('./routes/product.route'); // Imports routes for the pro
 var app = express();
 const product_details = require('./controllers/product.controller');
 
+app.use(allowCrossDomain);
 app.use('/products', product);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(allowCrossDomain);
 
 // Set up mongoose connection
 const mongoose = require('mongoose');

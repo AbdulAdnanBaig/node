@@ -18,9 +18,9 @@ exports.car_create = function (req, res, next) {
      let car = new Car(req.body);
      console.log('car structure',car);
     car.save(function (err) {
-        if (err) {
-            return next(err);
-        }
+        // if (err) {
+        //     return next(err);
+        // }
         res.send('CAR Created successfully')
     })
 };

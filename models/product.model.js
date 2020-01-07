@@ -11,7 +11,7 @@ let CarSchema = new Schema({
     title: {type: String, required: false},
     ctc: {type: String, required: false},
     ectc: {type: String, required: false},
-    notice: {type: Number, required: false},
+    notice: {type: String, required: false},
     remarks: {type: String, required: false},
     id: {type: Number, required: false},
 });

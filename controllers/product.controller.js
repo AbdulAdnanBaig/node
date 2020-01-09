@@ -21,6 +21,6 @@ exports.car_create = function (req, res, next) {
         // if (err) {
         //     return next(err);
         // }
-        res.send('CAR Created successfully')
+        res.status(200).send('CAR Created successfully')
     })
 };

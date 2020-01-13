@@ -14,14 +14,29 @@ exports.car_details = function (req, res) {
 };
 
 exports.car_create = function (req, res, next) {
-    console.log('from the controller',req.body);
-     let car = new Car(req.body);
-     console.log('car structure',car);
+    let dummy = req.body.mobile;
+    let obj = req.body;
+    console.log('requesting for a POST');
+    let car = new Car(req.body);
     car.save(function (err) {
         res.status(200)
-        .json({
-            status: true,
-            successMessage: "success"
+            .json({
+                status: true,
+                successMessage: "success"
+            });
+    });
+};
+
+exports.car_update = function (req, res, next) {
+    let mob = req.body.mobile;
+    let obj = req.body;
+    Car.updateOne({ mobile: mob }, { $set: obj },
+        function (err, resp) {
+            if (err) return next(err);
+            res.status(200)
+            .json({
+                status: true,
+                successMessage: "success"
+            });
         });
-    })
 };

@@ -10,4 +10,5 @@ const product_controller = require('../controllers/product.controller');
 
 app.get('/getCar', product_controller.car_details);
 app.post('/postCar', product_controller.car_create);
+app.post('/updateCar', product_controller.car_update);
 module.exports = app;

@@ -14,7 +14,9 @@ let CarSchema = new Schema({
     notice: {type: String, required: false},
     remarks: {type: String, required: false},
     id: {type: Number, required: false},
-    account: {type: Number, required: false}
+    account: {type: Number, required: false},
+    req: {type: Number, required:false},
+    exp: {type: Number, required:false},
 });
 
 

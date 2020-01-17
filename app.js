@@ -3,7 +3,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const product = require('./routes/product.route'); // Imports routes for the products
 var app = express();
-const product_details = require('./controllers/product.controller');
 
 var allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');

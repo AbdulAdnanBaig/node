@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 let DesignationSchema = new Schema({
-    // uId: {type: Number, required: false},
+    dId: {type: Number, required: false},
     designation: {type: String, required: false},
 });
 

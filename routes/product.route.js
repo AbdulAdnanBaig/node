@@ -16,4 +16,7 @@ app.post('/updateCar', product_controller.car_update);
 // Master routes
 app.post('/postAcc', master_controller.acc_create);
 app.get('/getAcc', master_controller.acc_get);
+
+app.post('/postDes', master_controller.des_create);
+app.get('/getDes', master_controller.des_get);
 module.exports = app;

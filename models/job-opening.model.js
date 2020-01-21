@@ -7,7 +7,8 @@ let JobSchema = new Schema({
     designation: { type: Number, required: false },
     status: { type: String, required: false },
     jobDes: { type: String, required: false },
-    panel: [String]
+    panel: [String],
+    open: {type: Number, required: false}
 });
 
 

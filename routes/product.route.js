@@ -19,4 +19,7 @@ app.get('/getAcc', master_controller.acc_get);
 
 app.post('/postDes', master_controller.des_create);
 app.get('/getDes', master_controller.des_get);
+
+app.post('/postLoc', master_controller.loc_create);
+app.get('/getLoc', master_controller.loc_get);
 module.exports = app;

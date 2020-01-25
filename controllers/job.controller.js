@@ -1,21 +1,23 @@
 const Job = require('../models/job-opening.model');
 const Acc = require('../models/account.model');
-var test
+const Des = require('../models/designation.model');
+
+var test = []
 
 // Job section API's
 exports.job_get = function (req, res) {
     Job.find(function (err, resp) {
-        // if (err) return next(err);      
+        if (err) return next(err); 
+        res.send(resp);     
         for (let index = 0; index < resp.length; index++) {
             const element = resp[index];
             // find query to populate the account details
             Acc.find({ 'uId' : element.account },
             function(req, res){
                 element.account = res;
-                console.log(element);
+                test.push(element);
             });
         }
-
     });
 };
 

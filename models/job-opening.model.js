@@ -8,7 +8,8 @@ let JobSchema = new Schema({
     status: { type: String, required: false },
     jobDes: { type: String, required: false },
     panel: [String],
-    open: {type: Number, required: false}
+    open: {type: Number, required: false},
+    title: {type: String, required: false}
 });
 
 

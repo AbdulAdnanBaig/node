@@ -19,6 +19,7 @@ let CarSchema = new Schema({
     account: {type: Number, required: false},
     req: {type: Number, required:false},
     exp: {type: Number, required:false},
+    status: {type: String, required: false}
 });
 
 

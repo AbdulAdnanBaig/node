@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 
 let CarSchema = new Schema({
     cId : {type: Number, required: false},
+    jobMap : {type: Number, required: false},
     name : {type: String, required: false},
     mobile: {type: String, required: false},
     mail: {type: String, required: false},

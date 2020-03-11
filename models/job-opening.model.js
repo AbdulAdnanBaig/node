@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const Account = require('./account.model')
 
 let JobSchema = new Schema({
     jId: { type: Number, required: false },
-    account: { },
+    accountId: String,
     designation: { type: Number, required: false },
     status: { type: String, required: false },
     jobDes: { type: String, required: false },

@@ -27,13 +27,21 @@ async.waterfall([
                     Secclbk(null,data)
                 }
             })
+        })
+       
+    },
+    function(jobs,thirdBlk){
+        console.log("second==Jobs==>",jobs.length)
+        var data =[]
+        jobs.forEach(function(element,index){
+            console.log(element.accountId,index)
             // to find the designation object
             Des.find({ 'dId' : element.designationId },function(err,result){
                 console.log("second====>",result)
                 data.push(JSON.parse(JSON.stringify(element)))
                 data[data.length-1]["designation"]=result[0]
                 if(index==jobs.length-1){
-                    Secclbk(null,data)
+                    thirdBlk(null,data)
                 }
             })
         })
@@ -78,3 +86,8 @@ exports.job_create = function (req, res, next) {
             });
     });
 };
+
+
+
+
+            

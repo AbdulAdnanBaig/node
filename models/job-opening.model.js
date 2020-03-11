@@ -5,7 +5,7 @@ const Account = require('./account.model')
 let JobSchema = new Schema({
     jId: { type: Number, required: false },
     accountId: String,
-    designation: { type: Number, required: false },
+    designationId: String,
     status: { type: String, required: false },
     jobDes: { type: String, required: false },
     panel: [String],
